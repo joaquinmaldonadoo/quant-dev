@@ -1,0 +1,10 @@
+build/
+build-*/
+data/*.csv
+results/
+__pycache__/
+*.pyc
+.pytest_cache/
+compile_commands.json
+.vscode/
+.idea/
