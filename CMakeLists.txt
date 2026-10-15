@@ -23,6 +23,9 @@ find_package(Threads REQUIRED)
 add_library(hft_core
   src/config.cpp
   src/logger.cpp
+  src/order_book.cpp
+  src/csv_feed.cpp
+  src/features.cpp
 )
 target_include_directories(hft_core PUBLIC include)
 target_link_libraries(hft_core PUBLIC Threads::Threads)
