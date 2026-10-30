@@ -26,6 +26,11 @@ add_library(hft_core
   src/order_book.cpp
   src/csv_feed.cpp
   src/features.cpp
+  src/avellaneda_stoikov.cpp
+  src/risk_manager.cpp
+  src/order_manager.cpp
+  src/exchange_sim.cpp
+  src/portfolio.cpp
 )
 target_include_directories(hft_core PUBLIC include)
 target_link_libraries(hft_core PUBLIC Threads::Threads)
