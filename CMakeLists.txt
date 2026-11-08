@@ -31,9 +31,17 @@ add_library(hft_core
   src/order_manager.cpp
   src/exchange_sim.cpp
   src/portfolio.cpp
+  src/metrics.cpp
+  src/backtest_engine.cpp
 )
 target_include_directories(hft_core PUBLIC include)
 target_link_libraries(hft_core PUBLIC Threads::Threads)
+
+add_executable(hft_backtest apps/hft_backtest.cpp)
+target_link_libraries(hft_backtest PRIVATE hft_core)
+
+add_executable(hft_bench apps/hft_bench.cpp)
+target_link_libraries(hft_bench PRIVATE hft_core)
 
 if(HFT_BUILD_TESTS)
   enable_testing()
